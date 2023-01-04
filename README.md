@@ -19,10 +19,10 @@ python3 -m venv venv
 ```
 pip install -r requirements.txt
 ```
-
+___
 
 # Get review results
-
+___
 At first, you need to get your auth token from Devman. 
 Create a bot and get your token from <a href="https://telegram.me/BotFather" target="_blank">BotFather</a>.
 Also you need to specify your chat_id, you can find it here
