@@ -25,9 +25,8 @@ pip install -r requirements.txt
 ### Get review results
 
 At first, you need to get your auth token from Devman. 
-Create a bot and get your token from <a href="https://telegram.me/BotFather" target="_blank">BotFather</a>.
-Also you need to specify your chat_id, you can find it
-<a href="https://telegram.me/userinfobot" target="_blank">here</a>.
+Create a bot and get your token from [BotFather](https://telegram.me/BotFather).
+Also you need to specify your chat_id, you can find it [here](https://telegram.me/userinfobot).
 Then create environment variables `AUTH_TOKEN`, `TG_BOT_TOKEN` and `TG_CHAT_ID`.
 ---
 
