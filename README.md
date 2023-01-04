@@ -4,7 +4,7 @@ Sends notification to user when the lesson has been reviewed by mentor.
 
 ---
 
-# How to execute:
+### How to execute:
 
 - Download or clone <a href="https://github.com/Ash2803/devman-bot" target="_blank">repo</a>;
 - You must have Python 3.6 or higher already installed;
@@ -19,10 +19,11 @@ python3 -m venv venv
 ```
 pip install -r requirements.txt
 ```
-___
 
-# Get review results
-___
+---
+
+### Get review results
+
 At first, you need to get your auth token from Devman. 
 Create a bot and get your token from <a href="https://telegram.me/BotFather" target="_blank">BotFather</a>.
 Also you need to specify your chat_id, you can find it here
@@ -36,6 +37,6 @@ Then create environment variables `AUTH_TOKEN`, `TG_BOT_TOKEN` and `TG_CHAT_ID`.
 python lessons.py
 ```
 
-# Project Goals
+### Project Goals
 
 The code is written for educational purposes at online-course for web-developers [dvmn.org](https://dvmn.org/)
