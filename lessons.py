@@ -15,10 +15,11 @@ def get_reviews_status(auth_token, chat_id, bot):
         try:
             response = requests.get("https://dvmn.org/api/long_polling/", headers=headers, timeout=5)
             response.raise_for_status()
-            timestamp = response.json()['new_attempts'][0]['timestamp']
-            lesson_title = response.json()['new_attempts'][0]['lesson_title']
-            lesson_url = response.json()['new_attempts'][0]['lesson_url']
-            review_status = response.json()['new_attempts'][0]['is_negative']
+            review_answer = response.json()
+            timestamp = review_answer['new_attempts'][0]['timestamp']
+            lesson_title = review_answer['new_attempts'][0]['lesson_title']
+            lesson_url = review_answer['new_attempts'][0]['lesson_url']
+            review_status = review_answer['new_attempts'][0]['is_negative']
             params = {
                 'timestamp': timestamp
             }
