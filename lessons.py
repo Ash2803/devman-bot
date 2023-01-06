@@ -28,6 +28,7 @@ def get_review_information(auth_token, chat_id, bot):
                 params['timestamp'] = review_answer['last_attempt_timestamp']
             if review_answer['status'] == 'timeout':
                 params['timestamp'] = review_answer['timestamp_to_request']
+                continue
 
             lesson_title = review_answer['new_attempts'][0]['lesson_title']
             lesson_url = review_answer['new_attempts'][0]['lesson_url']
@@ -48,9 +49,6 @@ def get_review_information(auth_token, chat_id, bot):
         except requests.exceptions.ConnectionError:
             logging.exception('Connection lost. Reconnecting...')
             time.sleep(10)
-            continue
-        except KeyError:
-            logging.exception('No responses with status "found"')
             continue
 
 
